@@ -1,0 +1,17 @@
+.title{
+    color:yellowgreen;
+    font-weight: bold;
+    font-style: 30px;
+    font-family: Tahoma;
+}
+.subtitle{
+    color:blue;
+    font-style: 25px;
+    font-family: "Century Gothic";
+}
+.text{
+    color:grey;
+    font-weight: bold;
+    font-style: 20px;
+    font-family: Tahoma;
+}

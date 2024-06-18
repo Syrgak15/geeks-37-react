@@ -1,0 +1,12 @@
+.title{
+    color:greenyellow;
+    font-family: "Century Gothic";
+    font-size: 30px;
+    font-weight: bold;
+}
+.description{
+    color:grey;
+    font-family:Tahoma;
+    font-size: 25px;
+    font-weight: 400;
+}
