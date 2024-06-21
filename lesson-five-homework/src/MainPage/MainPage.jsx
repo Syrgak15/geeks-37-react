@@ -1,38 +1,41 @@
 import {useRef,useState} from 'react';
+import Post from "../Post/Post";
 
 function MainPage() {
     const [users,setUsers] = useState([])
-    const inputRef = useRef(null)
-    const [newUsers,setNewUsers] = useState([])
+    const [name,setName]= useState('')
+
+    function handleChange(e){
+        setName(e.target.value)
+    }
 
     function createUser(){
-        const userName = inputRef.current.value
-        if(userName!== "" ) {
-            setUsers([...users, userName])
-            inputRef.current.value = ''
-        }
+       setUsers([...users,name])
+        setName("")
     }
-    function editUser(){
-        console.log(users)
-
+    function editUser(id){
+        const newName = [...users]
+        newName[id] = name
+        setUsers(newName)
+        setName("")
     }
-
-
-
     return (
         <div>
             <h2>Create User</h2>
             <form onSubmit={(e) => e.preventDefault()}>
-                <input type="text" placeholder='Write your name' ref={inputRef}/>
-                <button type='button' onClick={createUser}>Add</button>
+                <input type="text" value={name} placeholder='Write your name' onChange={(e)=>handleChange(e)}/>
+                <button type='button' disabled={!name} onClick={createUser}>Add</button>
             </form>
             <h3>Current users:</h3>
             {users.length > 0 ? (
                     <ul>
                         {users.map((user, index) => (
-                            <li key={index} style={{padding:"10px"}}>{user}
-                                <button style={{marginLeft:"20px"}} onClick={editUser}>Change</button>
-                            </li>
+                           <Post value={user}
+                                 disabled={name}
+                                 editUser={editUser}
+                                 key={index}
+                                 id={index}
+                           />
                         ))}
                     </ul>
                 ):
