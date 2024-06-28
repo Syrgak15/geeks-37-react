@@ -1,0 +1,11 @@
+.tablePage{
+    margin: 0 auto;
+    margin-top: 100px;
+    width:800px;
+    height:600px;
+    border:2px solid greenyellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}

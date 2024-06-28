@@ -1,0 +1,17 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.form label{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+small{
+    color:red;
+}
+label .error{
+    border:1px solid red;
+}
