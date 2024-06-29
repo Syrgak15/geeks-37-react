@@ -1,0 +1,21 @@
+
+.modalContent{
+    width: 520px;
+    height: 188px;
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+.modalContent h2{
+    display: block;
+    padding: 40px 10px;
+}
+.modalContent button{
+    width: 143px;
+    height: 29px;
+    background-color: black;
+    color:white;
+    margin:0 151px 41px 151px;
+    text-transform: uppercase;
+    cursor:pointer;
+}
